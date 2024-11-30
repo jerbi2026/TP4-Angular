@@ -1,4 +1,10 @@
 # Todolist
+![image](https://github.com/user-attachments/assets/1c15641b-a0f9-4677-b95c-3652ebec7038)
+![image](https://github.com/user-attachments/assets/36529a3e-71aa-409f-a523-8eaa15bb56b0)
+![image](https://github.com/user-attachments/assets/647cb5b4-dfa7-49e1-ba73-65957250ee4e)
+
+
+
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.1.1.
 
