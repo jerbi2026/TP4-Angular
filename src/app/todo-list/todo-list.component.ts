@@ -1,12 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { TodoService } from '../todo.service';
+import { Todo } from '../todo';
 
 @Component({
   selector: 'app-todo-list',
   templateUrl: './todo-list.component.html'
 })
 export class TodoListComponent implements OnInit {
-  todos: any[] = [];
+  todos: Todo[] = [];
 
   constructor(private todoService: TodoService) {}
 
@@ -15,18 +16,19 @@ export class TodoListComponent implements OnInit {
   }
 
   loadTodos(): void {
-    this.todoService.getTodoList().subscribe((data) => {
-      this.todos = data;
-    });
+    this.todos = this.todoService.getTodos();
   }
 
-  deleteTodo(todo: any): void {
-    this.todoService.deleteTodo(todo.id).subscribe(() => {
-      this.loadTodos();
-    });
+  deleteTodo(id: number): void {
+    this.todoService.deleteTodo(id);
+    this.loadTodos();
   }
 
-  displayTodoDetail(todo: any): void {
-    // Implémentez l'affichage des détails ici
+  viewTodoDetail(todo: Todo): void {
+    console.log('Détails du todo :', todo);
+  }
+
+  editTodo(todo: Todo): void {
+    console.log('Modification du todo :', todo);
   }
 }

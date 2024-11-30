@@ -1,6 +1,18 @@
-<nav class="navbar navbar-dark bg-dark">
-    <a class="navbar-brand">Todo App</a>
-    <button class="btn btn-dark" [routerLink]="['/todo-list']">Todos</button>
-    <button class="btn btn-dark" [routerLink]="['/todo-reactive-form']">Sign In</button>
-    <button class="btn btn-dark" [routerLink]="['/todo-template-driven-form']">New</button>
+
+
+
+  <nav class="navbar navbar-dark navbar-expand-lg bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand">Todo App</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-link" [routerLink]="['/todo-list']">Todos</a>
+          <a class="nav-link" [routerLink]="['/todo-reactive-form']">Sign In</a>
+          <a class="nav-link" [routerLink]="['/todo-template-driven-form']">New</a>
+        </div>
+      </div>
+    </div>
   </nav>

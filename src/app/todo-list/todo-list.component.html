@@ -1,21 +1,27 @@
-<!--<div class="container mt-3">
-    <table class="table">
-      <thead>
-        <tr>
-          <th>Title</th>
-          <th>Actions</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr *ngFor="let todo of todos">
-          <td>{{ todo.title }}</td>
-          <td>
-            <fa-icon [icon]="faList" (click)="displayTodoDetail(todo)"></fa-icon>
-            <fa-icon [icon]="faPenToSquare" (click)="updateTodo(todo)"></fa-icon>
-            <fa-icon [icon]="faTrash" (click)="deleteTodo(todo)"></fa-icon>
-          </td>
-        </tr>
-      </tbody>
-    </table>
-  </div>-->
+<app-head-bar></app-head-bar>
+<div class="container mt-3">
+    <h2>Liste des tâches</h2>
+    <ul class="list-group">
+      <li
+        class="list-group-item d-flex justify-content-between align-items-center"
+        *ngFor="let todo of todos"
+      >
+        <span>{{ todo.title }}</span>
+        <div>
+          <button class="btn btn-info btn-sm me-2" (click)="viewTodoDetail(todo)">
+            <i class="fa-solid fa-list"></i>
+
+          </button>
+          <button class="btn btn-warning btn-sm me-2" (click)="editTodo(todo)">
+            <i class="fa-solid fa-pen-to-square"></i>
+          </button>
+          <button class="btn btn-danger btn-sm" (click)="deleteTodo(todo.id)">
+            <i class="fa-solid fa-trash"></i>
+          </button>
+        </div>
+      </li>
+    </ul>
+  </div>
+  
+  
   
