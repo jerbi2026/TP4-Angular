@@ -11,6 +11,7 @@ import { UpdateTodoComponent } from './update-todo/update-todo.component';
 import { TodoTemplateDrivenFormComponent } from './todo-template-driven-form/todo-template-driven-form.component';
 import { TodoReactiveFormComponent } from './todo-reactive-form/todo-reactive-form.component';
 import { TodoPipe } from './todo.pipe';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,9 @@ import { TodoPipe } from './todo.pipe';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [
     provideClientHydration()

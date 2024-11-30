@@ -1,1 +1,55 @@
-<p>update-todo works!</p>
+<div class="container mt-3">
+    <h2>Modifier une tâche</h2>
+    <form #updateForm="ngForm" (ngSubmit)="onSubmit(updateForm)">
+      <div class="mb-3">
+        <label for="title" class="form-label">Titre</label>
+        <input
+          type="text"
+          id="title"
+          name="title"
+          class="form-control"
+          [(ngModel)]="todoToUpdate.title"
+          required
+        />
+      </div>
+  
+      <div class="mb-3">
+        <label for="description" class="form-label">Description</label>
+        <textarea
+          id="description"
+          name="description"
+          class="form-control"
+          [(ngModel)]="todoToUpdate.description"
+          required
+        ></textarea>
+      </div>
+  
+      <div class="mb-3">
+        <label for="date" class="form-label">Date</label>
+        <input
+          type="date"
+          id="date"
+          name="date"
+          class="form-control"
+          [(ngModel)]="todoToUpdate.date"
+          required
+        />
+      </div>
+  
+      <div class="mb-3">
+        <label class="form-label">
+          <input
+            type="checkbox"
+            name="done"
+            [(ngModel)]="todoToUpdate.done"
+          />
+          Terminé
+        </label>
+      </div>
+  
+      <button type="submit" class="btn btn-primary" [disabled]="!updateForm.valid">
+        Mettre à jour
+      </button>
+    </form>
+  </div>
+  

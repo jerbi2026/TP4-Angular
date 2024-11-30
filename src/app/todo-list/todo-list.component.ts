@@ -7,6 +7,7 @@ import { Todo } from '../todo';
   templateUrl: './todo-list.component.html'
 })
 export class TodoListComponent implements OnInit {
+  selectedTodo: Todo | null = null;
   todos: Todo[] = [];
 
   constructor(private todoService: TodoService) {}
@@ -30,5 +31,9 @@ export class TodoListComponent implements OnInit {
 
   editTodo(todo: Todo): void {
     console.log('Modification du todo :', todo);
+  }
+
+  selectTodoForUpdate(todo: Todo): void {
+    this.selectedTodo = { ...todo };
   }
 }
